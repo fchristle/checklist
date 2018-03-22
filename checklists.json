@@ -1,0 +1,17 @@
+[
+  {
+      "items" : [{ "text" : "Eggs", "checked": false} , { "text" : "Milk", "checked": false} ],
+      "name" : "Costco groceries",
+      "id" : 0
+  },
+  {
+      "items" : [{ "text" : "Raincoat", "checked": false} , { "text" : "Rain boots", "checked": false} ],
+      "name" : "Shopping",
+      "id" : 1
+  },
+  {
+      "items" : [{ "text" : "Contact lens", "checked": false} , { "text" : "Clothes", "checked": false} ],
+      "name" : "Travel",
+      "id": 2
+  }
+]
