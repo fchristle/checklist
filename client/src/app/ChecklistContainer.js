@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Checklist from "./Checklist";
+import {listChecklists} from "./api-utils";
 
 class ChecklistContainer extends Component {
   constructor() {
@@ -7,14 +8,8 @@ class ChecklistContainer extends Component {
     this.state = {checklists : []};
   }
   componentDidMount() {
-    fetch('/checklists')
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        const {checklists} = json;
-        this.setState({checklists});
-      });
+    listChecklists((checklists) => this.setState({checklists}));
+
   }
   viewChecklist = (checklist) => {
     const {id} = checklist;
