@@ -23,6 +23,15 @@ app.get('/checklists', (req, res) => {
   res.send(JSON.stringify(checklistResponse));
 });
 
+app.get('/checklists/:id', (req, res) => {
+  const id = req.params.id;
+  console.log("ID", id);
+  console.log("Checklists", checklists);
+  const checklist = checklists.find(list => list.id == id);
+  console.log("Checklist", checklist);
+  res.send(JSON.stringify(checklist));
+});
+
 const server = app.listen(7000, () => {
   console.log("Server running at http://localhost:" + server.address().port);
 });

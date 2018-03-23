@@ -2,16 +2,16 @@
   {
       "items" : [{ "text" : "Eggs", "checked": false} , { "text" : "Milk", "checked": false} ],
       "name" : "Costco groceries",
-      "id" : 0
+      "id" : 1
   },
   {
       "items" : [{ "text" : "Raincoat", "checked": false} , { "text" : "Rain boots", "checked": false} ],
       "name" : "Shopping",
-      "id" : 1
+      "id" : 2
   },
   {
       "items" : [{ "text" : "Contact lens", "checked": false} , { "text" : "Clothes", "checked": false} ],
       "name" : "Travel",
-      "id": 2
+      "id": 3
   }
 ]
