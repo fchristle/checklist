@@ -18,7 +18,11 @@ class ChecklistContainer extends Component {
   render() {
       const {checklists} = this.state;
       const checklistElements = checklists.map((checklist) => {
-        return (<div key={checklist.id} onClick={() => this.viewChecklist(checklist)}>{checklist.name}</div>);
+        return (
+          <div key={checklist.id}>
+            {checklist.name}
+            <input value=">" type="button" onClick={() => this.viewChecklist(checklist)}/>            
+          </div>);
       })
       return (<div>{checklistElements}</div>);
   }

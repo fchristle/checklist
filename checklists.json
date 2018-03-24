@@ -1,16 +1,16 @@
 [
   {
-      "items" : [{ "text" : "Eggs", "checked": false} , { "text" : "Milk", "checked": false} ],
+      "items" : [{"id" : 0, "text" : "Eggs", "checked": false} , { "id": 1, "text" : "Milk", "checked": false} ],
       "name" : "Costco groceries",
       "id" : 1
   },
   {
-      "items" : [{ "text" : "Raincoat", "checked": false} , { "text" : "Rain boots", "checked": false} ],
+      "items" : [{"id" : 0, "text" : "Raincoat", "checked": false} , { "id": 1, "text" : "Rain boots", "checked": false} ],
       "name" : "Shopping",
       "id" : 2
   },
   {
-      "items" : [{ "text" : "Contact lens", "checked": false} , { "text" : "Clothes", "checked": false} ],
+      "items" : [{ "id" : 0, "text" : "Contact lens", "checked": false} , { "id" : 1, "text" : "Clothes", "checked": false} ],
       "name" : "Travel",
       "id": 3
   }

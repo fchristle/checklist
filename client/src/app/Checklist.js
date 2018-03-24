@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {getChecklist} from './api-utils';
 
 class Checklist extends Component {
   constructor() {
@@ -7,13 +8,13 @@ class Checklist extends Component {
   }
   componentDidMount() {
     const {checklistId} = this.props;
-    fetch(`/checklists/${checklistId}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((checklist) => {
-        this.setState({checklist : checklist});
-      });
+    getChecklist(checklistId, (checklist) => this.setState({checklist}))
+  }
+  handleKeyPress = (e) => {
+    if(e.key === "Enter") {
+      alert("done");
+      console.log("Event", e);
+    }
   }
   render () {
     const {checklist} = this.state;
@@ -23,17 +24,24 @@ class Checklist extends Component {
       console.log("Checklist", checklist);
       const items = checklist.items.map(item => {
         return (
-          <li>
+          <li key={item.id}>
             <input type="checkbox" checked={item.checked}/>
             <label>{item.text}</label>
           </li>
         )
       });
+      const inputElement = (
+        <li>
+          <input type="text" name="newItem" placeholder = "Add item"
+              onKeyPress={this.handleKeyPress}/>
+        </li>
+      )
       checklistElement = (
         <div>
           {name}
           <ul>
             {items}
+            {inputElement}
           </ul>
         </div>
       );

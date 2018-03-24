@@ -9,3 +9,13 @@ export function listChecklists( setChecklists ) {
       setChecklists(checklists);
     });
 }
+
+export function getChecklist( checklistId,  setChecklist ) {
+  fetch(`/checklists/${checklistId}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((checklist) => {
+      setChecklist(checklist);
+    });
+}
